@@ -25,6 +25,7 @@ jobs:
       - run: echo "? This job's status is ${{ job.status }}."
   CI:
     runs-on: ubuntu-latest
+    needs: [Explore-GitHub-Actions]
     strategy:
       matrix:
         node-version: [10.x, 12.x, 14.x, 15.x, 16.x, 18.x]
